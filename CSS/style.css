@@ -1,0 +1,320 @@
+
+    /*---------------------
+        Universal style
+     ----------------------*/
+*{
+    margin:0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+      /*--------------
+             Fonts 
+        ---------------*/
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+      /* Common Style */
+body{
+    font-family: 'Roboto', sans-serif;
+    color:rgb(41, 40, 40);
+}
+
+      /*----------------------------
+             header Style Start
+        ------------------------------ */
+
+header{
+    background-color:#0707c0;
+    width: 100%;
+    height:100vh;
+    position: relative;
+    margin-bottom: 40px;
+}  
+.header__container{
+    width: 1160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 120px;
+    position: absolute;
+    left:95px;
+}
+
+
+.left__part__h1{
+    font-size: 4em;
+    color: white;
+    font-weight:700;
+}
+.button__link{
+
+    Width: 168px;
+    Height:44px;
+    background: linear-gradient(to right, #f75691, #ff015e);
+    text-align: center;
+    margin-top: 20px;
+    font-weight:600;
+    border-bottom-left-radius: 13px;
+    border-top-right-radius: 13px;
+    box-shadow: 0 0 5px gainsboro;
+    transition: all .3s;
+
+}
+.button__link:hover{
+    background: linear-gradient(to right,#ff015e,#f75691);
+    border-bottom-right-radius: 13px;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius:0;
+    border-top-right-radius:0;
+    
+}
+.button__link a{
+    color: white;
+    line-height: 45px;
+    word-spacing: 5px;
+}
+
+.header__right__part img{
+Width: 556px;
+Height: 438px;
+} 
+
+
+      /*----------------------------
+             Player Profile Style Start
+        ------------------------------ */
+
+.players__profile{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    width:1160px;
+    margin: 0 auto;
+
+}
+.player{
+    padding: 30px;
+    margin: 20px;
+    box-shadow: 0 0 8px lightgray;
+    border-radius: 7px;
+    transition: all 1s;
+}
+.player:hover{
+    transform: scale(1.1);
+}
+.player img{
+    width:100%;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+.player h2{
+    font-weight:700;
+}
+.player p{
+    text-align: justify;
+    margin-top: 15px;
+}
+
+
+/*--------------------------------
+     Highlight Section Style
+---------------------------------- */
+.highlight__section__container{
+    width: 1160px;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 110px;
+}
+.highlight__item{
+    height: 400px;
+    padding: 5px;
+    margin:10px;
+}
+
+.highlight__article{
+    margin-top: 40px;
+}
+.highlight__article h1{
+    margin-bottom: 20px;
+    font-size: 3em;
+}
+.highlight__article p{
+    line-height: 25px;
+    margin-bottom: 30px;
+
+}
+.img__highlight img{
+    width: 100%;
+    height: 400px;
+}
+
+/*--------------------------------
+     Ranking Section Style
+---------------------------------- */
+
+.Ranking__container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top:150px;
+}
+.column-1,.column-2,.column-3{
+margin: 0 10px;
+}
+.column-1{
+  box-shadow: 0 0 8px lightgray;
+  
+}
+.column-1 h1{
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin: 170px 0 0 80px;
+    color: #646464;
+
+}
+.column-1 p{
+    line-height: 30px; 
+    margin: 30px 0 0 80px;
+    color: #7e7d7d;
+
+ }
+
+
+table {
+    border-collapse: collapse;
+}
+
+table td{
+    width: 100px;
+}
+
+tbody td,th{
+    border-bottom: 1px solid #686666;
+    margin: 10px 0;
+padding: 20px;
+
+}
+.countryAndFlag{
+    display: flex;
+    align-items: center;
+}
+.td-img{
+    margin-right: 10px;
+}
+table td{
+    position:relative;
+    /* margin:7px 0; */
+}
+table h5{
+    position: absolute;
+    right:50%;
+}
+
+/*--------------------------------
+     Footer Section Style
+---------------------------------- */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 130px;
+    margin-bottom: 10px;
+}
+.football__logo img{
+    width: 70%;
+    display: block;
+    /* margin-left: 140px; */
+    margin: 0 auto;
+}
+.social__link a{
+    padding: 15px;
+}
+.social__link a img{
+    height: 50px;
+    width:50px;
+}
+.copyright__text{
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+/*--------------------------------
+     Media Query Start
+---------------------------------- */
+@media only screen and (max-width:688px) {
+
+
+    header{
+        background-color:#0707c0;
+        width: 100%;
+        margin-bottom: 40px;
+    } 
+    .header__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        left:0;
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .left__part__h1{
+    font-size: 2.5em;
+    }
+    .header__right__part img{
+        height: 100%;
+        width:100%;
+        margin-top: 30px;
+    }
+    .players__profile,.highlight__section__container,footer{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: center;
+        /* align-items: center; */
+        width: 100%;
+
+    }
+    .highlight__section__container{
+        padding: 3px;
+    }
+    .img__highlight img{
+        border-radius: 7px;
+        margin-top: 60px;
+    }
+    footer{
+        width:100%;
+        margin-top: 110px;
+    }
+
+    .football__logo img{
+        width: 70%;
+        display: block;
+        margin:0 auto;
+        margin-bottom: 30px;
+    }
+    .social__link a img{
+        height: 30px;
+        width:30px;
+    }
+    .social__link,.copyright__text {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    
+ 
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
