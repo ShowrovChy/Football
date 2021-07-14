@@ -8,6 +8,9 @@
     text-decoration: none;
     box-sizing: border-box;
 }
+video{
+    width: 100%;
+}
 
       /*--------------
              Fonts 
@@ -23,6 +26,11 @@ body{
       /*----------------------------
              header Style Start
         ------------------------------ */
+
+.header__right__part img{
+    animation: showrov 3s infinite ease-in-out alternate;
+    transition: all 1s;
+}
 
 header{
     background-color:#0707c0;
@@ -114,6 +122,7 @@ Height: 438px;
 .player p{
     text-align: justify;
     margin-top: 15px;
+    line-height: 25px;
 }
 
 
@@ -145,70 +154,9 @@ Height: 438px;
     margin-bottom: 30px;
 
 }
-.img__highlight img{
+.video__highlight video{
     width: 100%;
     height: 400px;
-}
-
-/*--------------------------------
-     Ranking Section Style
----------------------------------- */
-
-.Ranking__container{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    margin-top:150px;
-}
-.column-1,.column-2,.column-3{
-margin: 0 10px;
-}
-.column-1{
-  box-shadow: 0 0 8px lightgray;
-  
-}
-.column-1 h1{
-    font-size: 2em;
-    margin-bottom: 20px;
-    margin: 170px 0 0 80px;
-    color: #646464;
-
-}
-.column-1 p{
-    line-height: 30px; 
-    margin: 30px 0 0 80px;
-    color: #7e7d7d;
-
- }
-
-
-table {
-    border-collapse: collapse;
-}
-
-table td{
-    width: 100px;
-}
-
-tbody td,th{
-    border-bottom: 1px solid #686666;
-    margin: 10px 0;
-padding: 20px;
-
-}
-.countryAndFlag{
-    display: flex;
-    align-items: center;
-}
-.td-img{
-    margin-right: 10px;
-}
-table td{
-    position:relative;
-    /* margin:7px 0; */
-}
-table h5{
-    position: absolute;
-    right:50%;
 }
 
 /*--------------------------------
@@ -230,20 +178,28 @@ footer{
 }
 .social__link a{
     padding: 15px;
+    color: rgb(66, 66, 66);
+    font-size: 1.4em;
 }
-.social__link a img{
-    height: 50px;
-    width:50px;
-}
+
 .copyright__text{
     margin-top: 30px;
     font-size: 14px;
 }
 
-/*--------------------------------
-     Media Query Start
----------------------------------- */
+/*-------------------------------------------------
+                Media Query Start
+-------------------------------------------------- */
+/*-------------------------------------------------
+
+     Media Query For Mobile And Small screen Start
+
+-------------------------------------------------- */
 @media only screen and (max-width:688px) {
+
+/*-------------------------------------------------
+                Header section Start
+-------------------------------------------------- */
 
 
     header{
@@ -259,42 +215,52 @@ footer{
         width: 100%;
         margin-top: 60px;
     }
-
     .left__part__h1{
-    font-size: 2.5em;
-    }
+        font-size: 2.5em;
+        }
     .header__right__part img{
-        height: 100%;
+        height:100%;
         width:100%;
         margin-top: 30px;
     }
+
+
+  
+    
+/*-------------------------------------------------
+                Player and Highlight  section Start
+-------------------------------------------------- */
+
     .players__profile,.highlight__section__container,footer{
         display: grid;
         grid-template-columns: repeat(1,1fr);
         justify-content: center;
-        /* align-items: center; */
         width: 100%;
+    }
 
-    }
-    .highlight__section__container{
-        padding: 3px;
-    }
-    .img__highlight img{
+    .video__highlight video{
         border-radius: 7px;
         margin-top: 60px;
+        width: 100%;
     }
+
+
+/*-------------------------------------------------
+                Footer section Start
+-------------------------------------------------- */
+
     footer{
         width:100%;
         margin-top: 110px;
     }
 
     .football__logo img{
-        width: 70%;
+        width: 100%;
         display: block;
         margin:0 auto;
         margin-bottom: 30px;
     }
-    .social__link a img{
+    .social__link a{
         height: 30px;
         width:30px;
     }
@@ -303,12 +269,6 @@ footer{
         margin-bottom: 20px;
     }
     
- 
-
-
-
-
-
 }
 
 
